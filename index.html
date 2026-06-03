@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic To-Do Web App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro-section">
+        <p class="eyebrow">A Basic To-Do WebApp</p>
+        <h1>Organize daily tasks into pending and completed lists.</h1>
+        <p>
+          Add new tasks, mark them complete, edit task names, delete items, and
+          track when each task was added or completed.
+        </p>
+      </section>
+
+      <section class="app-card" aria-label="To-do web app">
+        <form class="task-form" id="task-form">
+          <label for="task-input">New Task</label>
+          <div class="input-row">
+            <input
+              id="task-input"
+              type="text"
+              placeholder="Example: Finish HTML project"
+              autocomplete="off"
+              required
+            />
+            <button type="submit">Add Task</button>
+          </div>
+        </form>
+
+        <div class="stats-grid" aria-label="Task summary">
+          <article>
+            <span id="total-count">0</span>
+            <p>Total Tasks</p>
+          </article>
+          <article>
+            <span id="pending-count">0</span>
+            <p>Pending</p>
+          </article>
+          <article>
+            <span id="completed-count">0</span>
+            <p>Completed</p>
+          </article>
+        </div>
+
+        <div class="task-columns">
+          <section class="task-list-section">
+            <div class="list-heading">
+              <h2>Pending Tasks</h2>
+              <button class="small-button" type="button" id="clear-pending">Clear</button>
+            </div>
+            <ul class="task-list" id="pending-list"></ul>
+          </section>
+
+          <section class="task-list-section">
+            <div class="list-heading">
+              <h2>Completed Tasks</h2>
+              <button class="small-button" type="button" id="clear-completed">Clear</button>
+            </div>
+            <ul class="task-list" id="completed-list"></ul>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
